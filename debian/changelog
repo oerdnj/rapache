@@ -1,40 +1,5 @@
-libapache2-mod-r-base (1.2.7-trusty0) trusty; urgency=low
+libapache2-mod-r-base (1.2.7-1) unstable; urgency=low
 
-  * Add support for rpm
+  * Initial packaging
 
- -- Jeroen Ooms <jeroen@opencpu.org>  Wed, 24 Jun 2015 00:00:00 -0600
-
-libapache2-mod-r-base (1.2.6-trusty0) trusty; urgency=low
-
-  * Add support for rpm
-
- -- Jeroen Ooms <jeroen@opencpu.org>  Sun, 17 Aug 2014 00:00:00 -0600
-
-libapache2-mod-r-base (1.2.5-saucy0) saucy; urgency=low
-
-  * Various small fixes
-
- -- Jeroen Ooms <jeroen@opencpu.org>  Mon, 23 Dec 2013 00:00:00 -0600
-
-libapache2-mod-r-base (1.2.4-raring5) raring; urgency=low
-
-  * Updates for compatibility with Apache 2.4
-
- -- Jeroen Ooms <jeroen@opencpu.org>  Tue, 15 Oct 2013 11:08:00 -0600
-
-libapache2-mod-r-base (1.1.14-ppa3) lucid; urgency=low
-
-  * Binary package release for rApache 1.1.14
-
- -- Jeffrey Horner <jeffrey.horner@gmail.com>  Wed, 12 Jan 2011 11:08:00 -0600
-libapache2-mod-r-base (1.1.13-ppa3) lucid; urgency=low
-
-  * Binary package release for rApache 1.1.13
-
- -- Jeffrey Horner <jeffrey.horner@gmail.com>  Thu, 09 Dec 2010 07:46:44 -0600
-
-libapache2-mod-r-base (1.1.10-ppa3) lucid; urgency=low
-
-  * First binary package release with new name.
-
- -- Jeffrey Horner <jeffrey.horner@gmail.com>  Fri, 01 Oct 2010 19:00:25 -0500
+ -- Ondřej Surý <ondrej@debian.org>  Wed, 05 Aug 2015 16:41:36 +0200
