@@ -1,21 +1,20 @@
-Source: libapache2-mod-r-base
+Source: rapache
 Section: web
 Priority: optional
-Maintainer: Jeffrey Horner <jeffrey.horner@gmail.com>
-Build-Depends: debhelper (>= 4.2.20), lsb-release, apache2-prefork-dev, apache2-mpm-prefork, libapreq2-dev, r-base-core, r-base-dev
-Standards-Version: 3.7.2
+Maintainer: Ondřej Surý <ondrej@debian.org>
+Build-Depends: debhelper (>= 9), dh-apache2, apache2-dev, r-base-core, r-base-dev, libapreq2-dev
+Standards-Version: 3.9.6
+Homepage: http://www.rapache.net/
 
 Package: libapache2-mod-r-base
 Architecture: any
-Depends: apache2-mpm-prefork | apache2-mpm-worker, apache2-bin | apache2.2-common, libapreq2-3 | libapreq2, r-base-core, ${shlibs:Depends}
+Depends: ${misc:Depends},
+	 ${shlibs:Depends},
+	 r-base-core
 Description: Apache module for running server-side R programs
- This package provides the R module for the Apache 2 webserver. Note
- that it will work with either Apache's prefork or worker MPM. Prefork
- is preferred.  
+ This package provides the R module for the Apache 2 webserver.
  .
  R is a language and environment for statistical computing and graphics.
  By embedding R inside Apache, developers can create dynamic web pages and
  graphics.  Even more compelling is the ability for developers to provide
  web service style access to novel, cutting edge statistical techniques.
- .
- Homepage: http://www.rapache.net/
