@@ -1,0 +1,47 @@
+--- rapache.orig/Makefile.am
++++ rapache/Makefile.am
+@@ -26,7 +26,6 @@ RLINKLD=@RLINKLD@
+ INCLUDES = $(RINCLUDES) $(APREQ_INCLUDES)
+ LDFLAGS = $(RLINKLD) $(APREQ_LINKLD)
+ LD_LIBRARY_PATH=$(R_LD_LIBRARY_PATH):$(APREQ_LIB_DIR)
+-RPATH=@RPATH@
+ 
+ all: mod_R.so $(DOCROOT)/httpd.conf
+ 
+@@ -34,7 +33,7 @@ mod_R.so: .apreq-config mod_R.c mod_R.h
+ 	@echo
+ 	@echo Compiling mod_R
+ 	@echo
+-	$(APXS) $(INCLUDES) -c mod_R.c $(RPATH) $(LDFLAGS)
++	$(APXS) $(INCLUDES) -c mod_R.c $(LDFLAGS)
+ 
+ .apreq-config:
+ 	@echo
+--- rapache.orig/configure.in
++++ rapache/configure.in
+@@ -136,16 +136,6 @@ AC_DEFUN([SET_DOCROOT],[
+         DOCROOT=`pwd`/test
+ ])
+ 
+-AC_PATH_PROG(UNAME,uname)
+-
+-AC_DEFUN([WITH_RPATH],[
+-	if test "${UNAME}" != ""; then
+-		if test "`${UNAME}`" = "Linux"; then
+-			RPATH=-Wl,-rpath,${RHOME}/lib
+-		fi
+-	fi
+-])
+-
+ AX_WITH_APXS
+ AC_SUBST(APXS)
+ HTTPD="`$APXS -q sbindir`/`$APXS -q progname`"
+@@ -165,8 +155,6 @@ AC_SUBST(APREQ_INCLUDES)
+ AC_SUBST(APREQ_LINKLD)
+ SET_DOCROOT
+ AC_SUBST(DOCROOT)
+-WITH_RPATH
+-AC_SUBST(RPATH)
+ 
+ SHLIBPATH_VAR=$shlibpath_var
+ AC_SUBST(SHLIBPATH_VAR)

@@ -2,7 +2,7 @@ Source: rapache
 Section: web
 Priority: optional
 Maintainer: Ondřej Surý <ondrej@debian.org>
-Build-Depends: debhelper (>= 9), dh-apache2, apache2-dev, r-base-core, r-base-dev, libapreq2-dev
+Build-Depends: debhelper (>= 9), dh-apache2, apache2-dev, r-base-core, r-base-dev, libapreq2-dev, dh-autoreconf, autotools-dev
 Standards-Version: 3.9.6
 Homepage: http://www.rapache.net/
 
