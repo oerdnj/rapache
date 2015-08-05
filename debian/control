@@ -11,10 +11,6 @@ Architecture: any
 Depends: ${misc:Depends},
 	 ${shlibs:Depends},
 	 r-base-core
-Description: Apache module for running server-side R programs
- This package provides the R module for the Apache 2 webserver.
- .
- R is a language and environment for statistical computing and graphics.
- By embedding R inside Apache, developers can create dynamic web pages and
- graphics.  Even more compelling is the ability for developers to provide
- web service style access to novel, cutting edge statistical techniques.
+Description: server-side R integration with Apache 2
+ This package provides the R module that adds support for embedding
+ the R interpreter inside Apache 2 webserver.
